@@ -60,6 +60,27 @@ margin-bottom: 10px;
       .nawbar-menu li a:hover{
      color:#00c3ff;
       }
+@media (max-width: 922px){
+        .nawbar-menu li a {
+          font-size: 13px;
+          margin-right:10% ;
+        }
+
+      }
+      @media (max-width:470px){
+        .nawbar{
+          box-shadow:5 2px 5px rgb(62, 241, 173) ;
+                  }.nawbar-brand{
+                    font-size: 17px;
+                     padding: 1px;
+          }
+        
+
+      }
+      
+
+
+      
       
 
 
