@@ -2,6 +2,7 @@ body{
     
     background:url(https://img.freepik.com/free-vector/paper-style-white-monochrome-background_52683-66443.jpg) ;
     background-size:1100px;
+    clamp:(18px,..,40px);
 }
 .nawbar{
     width: 100%;
