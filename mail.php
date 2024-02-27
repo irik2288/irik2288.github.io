@@ -1,30 +1,19 @@
-<?php 
-$login = $_POST['login'];
-$email = $_POST['email'];
-$tel = $_POST['tel'];
-
-$login = htmlspecialchars ($login);
-$email = htmlspecialchars ($email);
-$tel = htmlspecialchars ($tel);
-
-$login = urldecode ($login);
-$email=  urldecode ($email);
-$tel = urldecode ($tel);
-
-$login = trim  ($login);
-$email = trim  ($email);
-$tel = trim ($tel);
-if (mail("pidik5544@mail.ru"),
-"новое письмо с сайта"
-"логин: ".$login. "\n".
-"почта: ".$email,
-"телефон: ".$tel. "\n".
-" from:gruzdevaroslav140@gmail.com \r\n")
-){
-each ('письмо отправлено');
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
+  
+  // Здесь вы можете добавить проверки на валидность данных и другую логику
+  
+  $to = "gruzdevaroslav140@gmail.com";
+  $subject = "Новое сообщение с веб-сайта";
+  $body = "Имя: $name\nEmail: $email\nСообщение:\n$message";
+  
+  if (mail($to, $subject, $body)) {
+    echo "Спасибо! Ваше сообщение успешно отправлено.";
+  } else {
+    echo "К сожалению, произошла ошибка при отправке сообщения.";
+  }
 }
-else{
-    each ('есть ошибки. проверьте данные ...');
-}
-
 ?>
